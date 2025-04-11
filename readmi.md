@@ -154,3 +154,24 @@
 ---
 
 **Kiểu dữ liệu**:
+
+---
+**Một số hàm phổ biến**:
+- <b>isset()</b>` -> kiểm tra xem một biến đã được thiết lập hay không?,có xác định và khác NULL hay không`
+- <b>Syntax</b> `-> isset ( $var [, $var_2,.. ] ) `
+- <b>Với:</b>: 
+- <i>`$var` Là biến dữ liệu cần kiểm tra</i>,<br><i>`Hàm tra về FALSE` nếu biến chưa xác định hoặc đang mang giá trị NULL</i>
+---
+- <b>empty()</b>` ->  là hàm giúp kiểm tra một biến có rỗng hay không.`
+- <b>Syntax</b> `-> empty($var) `
+- <b>Với:</b>: 
+- <i>`$var` là biến cần kiểm tra dữ liệu rỗng</i><br>
+- <i>`Hàm trả về TRUE` nếu $var không xác định hoặc mang giá trị FALSE.</i>
+- <b>`Các trường hợp biến có giá trị FALSE`</b>
+- <b>(một chuỗi trống)</b>
+- <b>0 (0 là số nguyên)</b>
+- <b>0.0 (0 là số thực)</b>
+- <b>“0” (0 là một chuỗi)</b>
+- <b>NULL</b>
+- <b>FALSE</b>
+- <b>array() (Một mảng trống)</b>
