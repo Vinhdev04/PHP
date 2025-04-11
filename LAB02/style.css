@@ -86,3 +86,8 @@ th {
     align-items: center;
     margin-top: 20px;
 }
+
+.error {
+    color: red;
+    font-size: 0.9rem;
+}

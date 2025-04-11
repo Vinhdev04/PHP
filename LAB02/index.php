@@ -10,20 +10,23 @@
 
 <body>
 
-    <form action="index.php" method="post">
+    <form action="index.php" method="post" id="form-login">
         <div class="form-group">
             <label for="name">Username</label>
             <input type="text" name="username" id="name" placeholder="Enter your username..." autocomplete="true">
+            <span class="error" id="error-name"></span>
         </div>
         <div class="form-group">
-            <label for="MSSV">Mssv</label>
-            <input type="text" name="mssv" autocomplete="true" id="MSSV" placeholder="Enter your mssv...">
+            <label for="mssv">Mssv</label>
+            <input type="text" name="mssv" autocomplete="true" id="mssv" placeholder="Enter your mssv...">
+            <span class="error" id="error-mssv"></span>
         </div>
         <div class="form-group">
             <label for="EMAIL">Email</label>
-            <input type="email" name="email" autocomplete="true" id="EMAIL" placeholder="Enter your email...">
+            <input type="email" name="email" autocomplete="true" id="email" placeholder="Enter your email...">
+            <span class="error" id="error-email"></span>
         </div>
-        <input type="submit" name="login" value="Login">
+        <input type="submit" name="login" value="login" onclick="validate()">
     </form>
 
     <?php
@@ -34,7 +37,13 @@
         $mssv = $_POST['mssv'];
         $email = $_POST['email'];
 
-        // show dữ liệu trong table
+
+        // kiểm tra dữ liệu có hợp lệ hay không
+        if(empty($username) || empty($mssv) || empty($email)){
+            echo '<div class="error">Vui lòng nhập đầy đủ thông tin</div>';
+
+        }else{
+         // Nếu hợp lệ thì hiển thị bảng
          $result = '
                <div class="result">
         <h2>Result Login</h2>
@@ -58,12 +67,10 @@
         ';
         echo $result;
     }
-
-
-
-
-       
+}
     ?>
 </body>
+
+<script src="validate.js"></script>
 
 </html>
